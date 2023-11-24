@@ -224,13 +224,9 @@ void sendAriaData(const DataFromAria& data)
                     break;
                 }
             }
-            if (not client.connected()) {
-                Serial.println("Connection lost");
-            } else {
-                while (client.available()) {
-                    char c = client.read();
-                    Serial.write(c);
-                }
+            while (client.available()) {
+                char c = client.read();
+                Serial.write(c);
             }
             client.stop();
         }
