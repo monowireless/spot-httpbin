@@ -30,6 +30,9 @@ static const int RST_PIN = 5;
 static const int PRG_PIN = 4;
 static const int LED_PIN = 18;
 
+static const int8_t RX1_PIN = 16;
+static const int8_t TX1_PIN = 17;
+
 // Interfaces
 static WiFiClientSecure client;
 static WiFiUDP ntpUDP;
@@ -121,7 +124,7 @@ void anotherLoopForNTP() {
 
 // Initialize TWELITE
 void initTWELITE() {
-    Serial2.begin(115200);
+    Serial2.begin(115200, SERIAL_8N1, RX1_PIN, TX1_PIN);
     if (Twelite.begin(Serial2, LED_PIN, RST_PIN, PRG_PIN, TWE_CHANNEL, TWE_APP_ID)) {
         Serial.println("Started TWELITE.");
     }
@@ -235,3 +238,8 @@ void sendAriaData(const DataFromAria& data)
         Serial.println("Requests are too frequently; skip.");
     }
 }
+
+/*
+ * Copyright (C) 2024 Mono Wireless Inc. All Rights Reserved.
+ * Released under MW-OSSLA-1J,1E (MONO WIRELESS OPEN SOURCE SOFTWARE LICENSE AGREEMENT).
+ */
