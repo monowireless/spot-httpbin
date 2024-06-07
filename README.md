@@ -5,9 +5,9 @@
 # spot-httpbin
 
 **Mono Wireless TWELITE SPOT httpbin Client Example**
+(*mwings-v1.1.3*)
 
 [![MW-OSSLA](https://img.shields.io/badge/License-MW--OSSLA-e4007f)](LICENSE.md)
-
 [日本語版はこちら](README_J.md)
 
 ## Contents
@@ -47,9 +47,9 @@ HTTP**S** connections and NTP timestamps are available.
 
 - Environment
   - [Arduino IDE](https://github.com/arduino/Arduino) (1.x)
-  - [ESP32 Arduino core](https://github.com/espressif/arduino-esp32) (>= 2.0.12)
+  - [ESP32 Arduino core](https://github.com/espressif/arduino-esp32) (< 3.0, >= 2.0.12)
 - Libraries
-  - [MWings](https://github.com/monowireless/mwings_arduino) (>= 1.0.1)
+  - [MWings](https://github.com/monowireless/mwings_arduino) (< 1.2, >= 1.0.1)
   - [Included] [NTPClient](https://github.com/arduino-libraries/NTPClient) (>= 3.2.1)
   - [Included] [Time](https://github.com/PaulStoffregen/Time) (>= 1.6.1)
 
